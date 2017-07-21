@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Roman</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Password_Autofill" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="34b-bf-nP5">
+                                <rect key="frame" x="62.5" y="111" width="250" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DHC-YW-PBp"/>
+                                    <constraint firstAttribute="width" constant="250" id="cfW-Pa-yLt"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JtF-jW-YSu">
+                                <rect key="frame" x="62.5" y="178" width="250" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="hfK-Tu-iVr"/>
+                                    <constraint firstAttribute="height" constant="40" id="kHm-7L-1fn"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AJ-AA-B26">
+                                <rect key="frame" x="107.5" y="257" width="160" height="40"/>
+                                <color key="backgroundColor" red="0.98431372549019602" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="abM-e0-nWj"/>
+                                    <constraint firstAttribute="width" constant="160" id="oXY-2b-SMl"/>
+                                </constraints>
+                                <state key="normal" title="Sign in"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapSignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CPb-Fb-QaX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="34b-bf-nP5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0wO-cv-5gt"/>
+                            <constraint firstItem="34b-bf-nP5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="91" id="QmL-lf-Ik3"/>
+                            <constraint firstItem="7AJ-AA-B26" firstAttribute="top" secondItem="JtF-jW-YSu" secondAttribute="bottom" constant="39" id="mlK-mb-yVY"/>
+                            <constraint firstItem="7AJ-AA-B26" firstAttribute="centerX" secondItem="JtF-jW-YSu" secondAttribute="centerX" id="nyu-u8-pPc"/>
+                            <constraint firstItem="JtF-jW-YSu" firstAttribute="top" secondItem="34b-bf-nP5" secondAttribute="bottom" constant="27" id="tj7-FD-5wp"/>
+                            <constraint firstItem="JtF-jW-YSu" firstAttribute="centerX" secondItem="34b-bf-nP5" secondAttribute="centerX" id="wUo-fb-jsl"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="WfY-sD-SKZ" appends="YES" id="E09-Hb-lb6"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="JtF-jW-YSu" id="UxD-bs-W3s"/>
+                        <outlet property="signInButton" destination="7AJ-AA-B26" id="ItS-Cn-ng5"/>
+                        <outlet property="userNameTextField" destination="34b-bf-nP5" id="eld-fU-hwy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="WfY-sD-SKZ">
+                    <connections>
+                        <action selector="didTapOutside:" destination="BYZ-38-t0r" id="ulO-Hj-di6"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
